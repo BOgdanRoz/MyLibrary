@@ -1,0 +1,80 @@
+.loading {
+    padding: 48px 0;
+    color: #86634a;
+    font-size: 1.15rem;
+}
+
+.bookPage {
+    display: grid;
+    grid-template-columns: minmax(220px, 300px) minmax(0, 1fr);
+    gap: clamp(28px, 6vw, 76px);
+    align-items: start;
+    padding: clamp(22px, 5vw, 54px);
+    border: 1px solid #c9ad8e;
+    border-radius: 8px;
+    background: rgba(255, 250, 240, 0.82);
+    box-shadow: 0 12px 28px rgba(73, 47, 30, 0.12);
+}
+
+.cover {
+    display: block;
+    width: 100%;
+    max-height: 440px;
+    object-fit: cover;
+    border: 7px solid #70462e;
+    box-shadow: 8px 10px 0 #d1b38d, 0 14px 24px rgba(73, 47, 30, 0.2);
+}
+
+.details h2 {
+    margin: 0 0 10px;
+    color: #422c20;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    line-height: 1.08;
+}
+
+.author {
+    margin: 0 0 28px;
+    color: #a76639;
+    font-size: 1.1rem;
+    font-style: italic;
+}
+
+.description {
+    max-width: 680px;
+    margin: 0 0 30px;
+    color: #594337;
+    font-family: system-ui, sans-serif;
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+.favoriteButton {
+    border: 0;
+    border-radius: 4px;
+    padding: 13px 20px;
+    cursor: pointer;
+    background: #70462e;
+    color: #fff8eb;
+    font-family: system-ui, sans-serif;
+    font-size: 0.92rem;
+    font-weight: 700;
+    transition: background-color 160ms ease, transform 160ms ease;
+}
+
+.favoriteButton:hover,
+.favoriteButton:focus-visible {
+    outline: none;
+    background: #a76639;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 700px) {
+    .bookPage {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .cover {
+        width: min(100%, 260px);
+        margin: 0 auto;
+    }
+}

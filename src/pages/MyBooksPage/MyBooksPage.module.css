@@ -1,0 +1,21 @@
+.booksList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+    align-items: stretch;
+}
+
+.booksList > a {
+    flex: 1 1 190px;
+    max-width: 220px;
+}
+
+@media (max-width: 600px) {
+    .booksList {
+        gap: 18px;
+    }
+
+    .booksList > a {
+        flex-basis: calc(50% - 9px);
+    }
+}

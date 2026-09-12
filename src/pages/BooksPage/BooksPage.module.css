@@ -1,0 +1,16 @@
+.booksList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    gap: 28px;
+}
+
+.booksList > a {
+    min-width: 0;
+}
+
+@media (max-width: 600px) {
+    .booksList {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
+}
