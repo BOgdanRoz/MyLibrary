@@ -11,6 +11,7 @@ function App() {
       <Header />
       <main className="page-content">
         <Routes>
+          <Route path="/" element={<BooksPage/>}/>
           <Route path="/books" element={<BooksPage/>}/>
           <Route path="/books/:id" element={<BookPage/>}/>
           <Route path="/my-books" element={<MyBooksPage/>}/>
