@@ -1,16 +1,111 @@
-# React + Vite
+# The Reading Room
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern book library application built with React.
 
-Currently, two official plugins are available:
+Users can search for books, filter search results, view detailed information about books, and save books to their personal library.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Live Demo
 
-## React Compiler
+[The Reading Room](https://my-library-reading-room.vercel.app/)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+- Search books by title
+- Filter books by publication year
+- Filter books by language
+- View detailed information about books
+- Add books to "My Library"
+- Remove books from "My Library"
+- Save books using LocalStorage
+- Responsive book grid
+- Loading states
+- Image error handling
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Technologies
+
+- React
+- JavaScript
+- React Router
+- CSS Modules
+- Vite
+- Open Library API
+- LocalStorage
+
+## API
+
+This project uses the Open Library API to search for books and retrieve information about books and authors.
+
+## Getting Started
+
+### Prerequisites
+
+Make sure you have Node.js installed on your computer.
+
+### Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/BOgdanRoz/MyLibrary
+
+Navigate to the project directory:
+
+cd MyLibrary
+
+Install dependencies:
+
+npm install
+
+Start the development server:
+
+npm run dev
+
+Open the local URL provided by Vite in your browser.
+
+Project Structure
+src/
+├── components/
+│   ├── Header/
+│   │   ├── Header.jsx
+│   │   └── Header.module.css
+│   │
+│   ├── BookCard/
+│   │   ├── BookCard.jsx
+│   │   └── BookCard.module.css
+│   │
+│   └── SearchInput/
+│       └── SearchInput.jsx
+│
+├── pages/
+│   ├── BooksPage/
+│   │   ├── BooksPage.jsx
+│   │   └── BooksPage.module.css
+│   │
+│   ├── BookPage/
+│   │   ├── BookPage.jsx
+│   │   └── BookPage.module.css
+│   │
+│   └── MyBooksPage/
+│       ├── MyBooksPage.jsx
+│       └── MyBooksPage.module.css
+│
+├── App.jsx
+└── main.jsx
+How It Works
+
+Books are fetched from the Open Library API and displayed as cards.
+
+Users can:
+
+Search for books by title.
+Open the filters panel.
+Filter books by publication year and language.
+Open a book to view detailed information.
+Add or remove books from their personal library.
+
+Saved books are stored in the browser's LocalStorage, so no backend or account is required.
+
+Author
+
+Bogdan Rozl
+```
