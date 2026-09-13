@@ -20,6 +20,7 @@ Users can search for books, filter search results, view detailed information abo
 - Responsive book grid
 - Loading states
 - Image error handling
+- Client-side routing
 
 ## Technologies
 
@@ -73,8 +74,13 @@ src/
 │   │   ├── BookCard.jsx
 │   │   └── BookCard.module.css
 │   │
-│   └── SearchInput/
-│       └── SearchInput.jsx
+│   ├── SearchInput/
+│   │   ├── SearchInput.jsx
+│   │   └── SearchInput.module.css
+│   │
+│   └── Filters/
+│       ├── Filters.jsx
+│       └── Filters.module.css
 │
 ├── pages/
 │   ├── BooksPage/
@@ -90,7 +96,8 @@ src/
 │       └── MyBooksPage.module.css
 │
 ├── App.jsx
-└── main.jsx
+├── main.jsx
+└── index.css
 How It Works
 
 Books are fetched from the Open Library API and displayed as cards.
@@ -105,6 +112,14 @@ Add or remove books from their personal library.
 
 Saved books are stored in the browser's LocalStorage, so no backend or account is required.
 
+Routing
+
+The application uses React Router for navigation between pages:
+
+/ — Books library
+/books — Books library
+/books/:id — Book details
+/my-books — Personal library
 Author
 
 Bogdan Rozl
