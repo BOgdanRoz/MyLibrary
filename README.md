@@ -120,6 +120,7 @@ The application uses React Router for navigation between pages:
 /books — Books library
 /books/:id — Book details
 /my-books — Personal library
+
 Author
 
 Bogdan Rozl
