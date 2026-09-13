@@ -16,7 +16,7 @@ function BookPage() {
             const data = await response.json()
 
             const savedBooks = localStorage.getItem("books")
-            const books = JSON.parse(savedBooks)
+            const books = JSON.parse(savedBooks) || []
 
             const isBookFavorite = books.some(book => book.key === data.key)
 

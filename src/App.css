@@ -14,16 +14,25 @@ h1 {
     font-size: clamp(2rem, 4vw, 3.2rem);
     font-weight: 700;
     letter-spacing: -0.035em;
+    width: 180px;
+    cursor: pointer;
 }
 
 h1::after {
     display: block;
-    width: 74px;
+    width: 160px;
     height: 4px;
     margin-top: 14px;
     border-radius: 99px;
     background: #a76639;
     content: "";
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: opacity 220ms ease, transform 220ms ease;
+}
+
+h1:hover::after {
+    transform: scaleX(1);
 }
 
 @media (max-width: 600px) {
